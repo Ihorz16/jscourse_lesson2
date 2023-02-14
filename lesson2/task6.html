@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача 6</h1>
+	<p>З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару
+		окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</p>
+	<script>
+		// 1.Вводимо необхідні дані
+		let firstCost = parseFloat(prompt('Введіть вартість першого товару', '0'))
+		let firstQuantity = parseFloat(prompt('Введіть кількість першого товару', '0'))
+
+
+		let secondCost = parseFloat(prompt('Введіть вартість другого товару', '0'))
+		let secondQuantity = parseFloat(prompt('Введіть кількість другого товару', '0'))
+
+
+		let thirdCost = parseFloat(prompt('Введіть вартість третього товару', '0'))
+		let thirdQuantity = parseFloat(prompt('Введіть кількість третього товару', '0'))
+
+		// 2.Знаходимо результат
+		let costFirstProduct = firstCost * firstQuantity
+		let costSecondProduct = secondCost * secondQuantity
+		let costThirdProduct = thirdCost * thirdQuantity
+		let totalPriceAll = costFirstProduct + costSecondProduct + costThirdProduct
+		// 3.Вводимо результат
+		document.write(`
+<table border="2px">
+<tr>
+	<td> Вартість першого товару = ${costFirstProduct}грн </td>
+	<tr>
+	<td> Вартість другого товару = ${costSecondProduct}грн </td>
+	<tr>
+	<td> Вартість третього товару = ${costThirdProduct}грн </td>
+	<tr>
+	 <td> Загальна вартість = ${totalPriceAll}грн </td>
+	 <tr>
+		</table>
+		
+`)
+	</script>
+
+
+</body>
+
+</html>
